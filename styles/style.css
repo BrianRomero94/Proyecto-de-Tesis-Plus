@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+
+:root{
+
+    --color-primario: #000000;
+    --color-secundario:#F6F6F6;
+    --color-terciario: #FFD700;
+    --color-cuarternario: #22D4FD;
+    --color-hover:#272727;
+    
+
+    --fuente-Montserrat:"Montserrat", sans serif;
+    --fuente-Krona: "Krona One", sans serif;
+
+}
+
+* {
+    margin: 0; /* Mejor práctica: margin y padding a 0 para resetear */
+    padding: 0;
+    box-sizing: border-box; /* Mejor práctica: box-sizing aplicado a todos */
+}
+
+html, body {
+    height: 100%; /* Asegura que el html y el body ocupen toda la altura */
+}
+
+body {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    font-family: var(--fuente-Montserrat);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que el footer esté en la parte inferior */
+}
+
+.header {
+    padding: 10%;
+}
+
+.header_menu {
+    display: flex;
+    gap: 88px;
+}
+
+.header_menu_link {
+    font-family: var(--fuente-Montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-cuarternario);
+    text-decoration: none;
+}
+
+.titulo-blog {
+    color: var(--color-cuarternario);
+}
+
+.presentacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%; /* Ajustar el tamaño del contenedor principal */
+    margin: 0 auto;
+    flex-grow: 1; /* Asegura que la sección principal ocupe el espacio restante */
+    gap: 82px;
+}
+
+.presentacion_contenido {
+    width: 50%; /* Ajustar el tamaño para hacer espacio para la imagen */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentacion_imagen {
+    width: 45%; /* Ajustar el tamaño de la imagen */
+    height: auto;
+    border-radius: 10px; /* Opcional: añade un borde redondeado a la imagen */
+}
+
+.presentacion_contenido_titulo,
+.presentacion__contenido__titulo {
+    font-size: 2.25rem;
+    font-family: var(--fuente-Krona);
+    margin-bottom: 20px; /* Espacio entre el título y los párrafos */
+}
+
+.presentacion_contenido_texto,
+.presentacion__contenido__texto {
+    font-size: 1.5rem;
+    font-family: var(--fuente-Montserrat);
+    text-align: justify; /* Justificar el texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin-bottom: 20px; /* Espacio entre párrafos y otros elementos */
+}
+
+/* Agregar un margen adicional entre párrafos específicamente */
+.presentacion_contenido_texto + .presentacion_contenido_texto,
+.presentacion__contenido__texto + .presentacion__contenido__texto {
+    margin-top: 20px; /* Espacio entre párrafos */
+}
+
+.texto-destacado {
+    color: var(--color-terciario);
+}
+
+.presentacion_enlaces {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacion_enlaces_subtitulo {
+    font-family: "krona one", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.presentacion_enlaces_links {
+    width: 50%; /* Ajustar el tamaño de los enlaces */
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 8px;
+    font-family: var(--fuente-Montserrat);
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-secundario);
+    margin-top: 10px;
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.presentacion_enlaces_links:hover {
+    background-color: var(--color-hover);  
+}
+.presentacion__imagen{ 
+    width: 50%;
+}
+.footer { 
+    background-color: var(--color-cuarternario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    width: 100%;
+}
+    @media (max-width: 1200px) {
+        
+        .header {
+            padding: 10%;
+        }
+        .header_menu {
+            justify-content: center;
+        }
+
+        .presentacion {
+        flex-direction:column-reverse;
+        padding: 5%
+        }
+
+        .presentacion_contenido{
+
+        width: auto;
+        }   
+    }
